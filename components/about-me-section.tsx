@@ -23,8 +23,8 @@ export const AboutMeSection = () => {
                 Curso de TGPSI na EPAD
               </h3>
               <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                Entrei no curso "Técnio de Gestão e Programação de Sistemas
-                Informáticos" na Escola Profissional de Artes Tecnologia e
+                Entrei no curso &quot;Técnio de Gestão e Programação de Sistemas
+                Informáticos&quot; na Escola Profissional de Artes Tecnologia e
                 Desporto.
               </p>
             </li>
