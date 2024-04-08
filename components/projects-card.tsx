@@ -24,7 +24,7 @@ export const ProjectsCard = () => {
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2}}
+        transition={{ delay: 0.2 }}
         className="w-full h-fit bg-zinc-900/70 border border-zinc-800 backdrop-blur-2xl rounded-xl p-4 flex flex-col"
       >
         <div className="flex justify-between">
@@ -46,14 +46,12 @@ export const ProjectsCard = () => {
                 ClínicaOnline
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-white hover:bg-zinc-950 flex gap-1">
-                <FileText className="size-4" />
-                Baixar Relatório
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-zinc-950 flex gap-1">
-                <Link2 className="size-4" />
-                Link
-              </DropdownMenuItem>
+              <a href="/Relatorio_pap.pdf" download>
+                <DropdownMenuItem className="text-white hover:bg-zinc-950 flex gap-1">
+                  <FileText className="size-4" />
+                  Baixar Relatório
+                </DropdownMenuItem>
+              </a>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

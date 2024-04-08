@@ -2,6 +2,7 @@
 import { FileText, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const ProfileSection = () => {
   return (
@@ -31,15 +32,13 @@ export const ProfileSection = () => {
             <p className="text-white/70">
               Eu sou o Tomás, tenho 17 anos e sou um programador full-stack.
             </p>
-            <div className="flex flex-col mt-2 xl:mt-0 xl:flex-row w-full gap-2">
-              <Button className="gap-1 w-full text-white">
-                <FileText className="size-5" />
-                Baixar CV
-              </Button>
-              <Button className="w-full gap-1 text-white">
-                <Send className="size-5" />
-                Contacte-me
-              </Button>
+            <div className="mt-2 xl:mt-0 w-full gap-2">
+              <a href="/cv.pdf" download>
+                <Button className="gap-1 w-full text-white">
+                  <FileText className="size-5" />
+                  Baixar CV
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
