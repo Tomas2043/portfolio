@@ -11,7 +11,7 @@ export const ProfileSection = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="w-full h-2/3 bg-zinc-900/70 border border-zinc-800 backdrop-blur-2xl rounded-2xl p-4 flex flex-col gap-3"
+          className="w-full h-2/3 bg-zinc-900/70 border border-zinc-800 backdrop-blur-2xl rounded-2xl p-4 flex flex-col gap-3 noise"
         >
           <img src={"/foto.jpg"} alt="Foto" className="rounded-md h-full" />
         </motion.div>
@@ -33,12 +33,20 @@ export const ProfileSection = () => {
               Eu sou o Tomás, tenho 17 anos e sou um programador full-stack.
             </p>
             <div className="mt-2 xl:mt-0 w-full gap-2">
-              <a href="/cv.pdf" download>
-                <Button className="gap-1 w-full text-white">
+                <Button
+                  className="gap-1 w-full text-white"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/cv.pdf';
+                    link.download = 'cv.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
                   <FileText className="size-5" />
                   Baixar CV
                 </Button>
-              </a>
             </div>
           </div>
         </motion.div>

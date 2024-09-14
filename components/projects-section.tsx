@@ -19,7 +19,7 @@ export const ProjectsSection = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="h-full bg-zinc-900/70 border border-zinc-800 backdrop-blur-2xl rounded-xl p-4 flex flex-col gap-3 overflow-auto"
+          className="h-full bg-zinc-900/70 border border-zinc-800 backdrop-blur-2xl rounded-xl p-4 flex flex-col gap-3 overflow-auto noise"
         >
           <h1 className="font-bold text-white text-3xl">Projetos</h1>
           <ProjectsCard />

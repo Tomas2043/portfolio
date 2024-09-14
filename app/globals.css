@@ -40,11 +40,19 @@
   border: 3px solid #3f3f46;
 }
 
+.noise {
+  background-image: url('/noise.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-color: rgba(24, 24, 27, 0.7);
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground noise;
   }
 }

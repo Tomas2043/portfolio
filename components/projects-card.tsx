@@ -46,12 +46,19 @@ export const ProjectsCard = () => {
                 ClínicaOnline
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <a href="/Relatorio_pap.pdf" download>
-                <DropdownMenuItem className="text-white hover:bg-zinc-950 flex gap-1">
-                  <FileText className="size-4" />
-                  Baixar Relatório
-                </DropdownMenuItem>
-              </a>
+              <DropdownMenuItem
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Relatorio_pap.pdf';
+                  link.download = 'Relatorio_pap.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="text-white hover:bg-zinc-950 flex gap-1">
+                <FileText className="size-4" />
+                Baixar Relatório
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
