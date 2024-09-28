@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const sourceSerif4 = Source_Serif_4({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Tomás Andrade - Portfolio",
-  description: "Portefólio do Tomás Andrade",
+  title: "Tomás Andrade | Web Developer",
 };
 
 export default function RootLayout({
@@ -18,15 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-zinc-950 overflow-auto md:overflow-hidden")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={sourceSerif4.className}>
+        <div className="">
+          <Navbar />
           {children}
-        </ThemeProvider>
+        </div>
       </body>
     </html>
   );

@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 36 93% 97%;
+    --foreground: 122 10% 50%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 142.1 76.2% 36.3%;
-    --primary-foreground: 355.7 100% 97.3%;
+    --primary: 123 10% 35%;
+    --primary-foreground:  122 10% 70%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
@@ -31,21 +31,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #18181b;
+  background: rgba(255, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3f3f46;
+  background-color: #506251;
   border-radius: 20px;
-  border: 3px solid #3f3f46;
+  border: 3px solid #506251;
 }
 
-.noise {
-  background-image: url('/noise.svg');
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
-  background-color: rgba(24, 24, 27, 0.7);
+.title {
+  color: #506251;
 }
 
 @layer base {
@@ -53,6 +49,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground noise;
+    @apply bg-background text-foreground text-lg scroll-smooth;
   }
 }
