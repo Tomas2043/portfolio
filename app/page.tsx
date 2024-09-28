@@ -5,56 +5,6 @@ import { Timeline } from "@/components/timeline";
 import { TimelineItem } from "@/components/timeline-item";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import Image from "next/image"
-
-const content = [
-  {
-    title: "Collaborative Editing",
-    description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
-        <Image
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Version control",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: "Running out of content",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
-      </div>
-    ),
-  },
-];
 
 const timelineItems = [
   {
@@ -73,7 +23,7 @@ const timelineItems = [
     title: "Bachelors Degree",
     bullet: "🎓",
     date: "Expected graduation: 2027",
-    children: <p className="text-primary-foreground">I've recently started a level 5 vocation course that has the option of getting a bachelors degree.</p>
+    children: <p className="text-primary-foreground">I&apos;ve recently started a level 5 vocation course that has the option of getting a bachelors degree.</p>
   }
 ]
 
@@ -89,7 +39,7 @@ export default function Home() {
               className="flex flex-col gap-4"
             >
               <h1 className="title font-bold text-[40px]">
-                Hey! I'm Tomás
+                Hey! I&apos;m Tomás
                 <motion.span
                   initial={{ rotate: 0 }}
                   animate={{ rotate: [0, 20, -10, 20, 0] }}
@@ -100,7 +50,7 @@ export default function Home() {
                 </motion.span>
               </h1>
               <h2 className="text-[20px]">
-                I'm a student / junior full-stack web developer based in <span className="title"><span>📍</span>Lisbon, Portugal</span>.
+                I&apos;m a student / junior full-stack web developer based in <span className="title"><span>📍</span>Lisbon, Portugal</span>.
               </h2>
             </motion.div>
           </div>
@@ -117,7 +67,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 md:px-36 xl:px-60 py-14">
             <div className="flex flex-col gap-3">
               <h1 className="text-background font-bold text-4xl">About Me 😁</h1>
-              <p className="text-primary-foreground">My name is <span className="text-background">Tomás Andrade </span>and I'm a <span className="text-background px-2">🇵🇹 Portuguese-Angolan 🇦🇴</span> web developer / student born in 2006. I'm very passionate about what I do and very eager to learn new things.</p>
+              <p className="text-primary-foreground">My name is <span className="text-background">Tomás Andrade </span>and I&apos;m a <span className="text-background px-2">🇵🇹 Portuguese-Angolan 🇦🇴</span> web developer / student born in 2006. I&apos;m very passionate about what I do and very eager to learn new things.</p>
             </div>
             <div className="flex flex-col gap-4">
               <h1 className="text-background font-bold text-4xl">My Journey ⌛️</h1>
