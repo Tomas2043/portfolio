@@ -75,25 +75,26 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <section className="mt-32 md:px-36 xl:px-60">
-          <div className="grid grid-cols-2">
-            <div>
-              <h1 className="title font-bold text-4xl">Tools that I work / have worked with:</h1>
-            </div>
-          </div>
-        </section> */}
         <div className="flex flex-col md:px-36 xl:px-60 mt-20" id="skills">
           <h1 className="title text-xl text-center font-bold">Tools and technologies I work / have worked with:</h1>
         </div>
         <AnimatedLogoCloud />
+        <section className="mt-20 md:px-36 xl:px-60" id="portfolio"> 
+          <h1 className="title text-4xl font-bold">Projects</h1>
+          
+        </section>
         <Footer />
       </main>
       <motion.a
         initial={{ y: 0 }}
         animate={{ y: 10 }}
         transition={{ duration: 0.7, repeat: Infinity, ease: "easeInOut", repeatType: "mirror" }}
-        className="absolute bg-primary right-0 bottom-0 text-background rounded-full m-14 p-5"
+        className="absolute bg-primary right-0 bottom-0 text-background rounded-full md:m-10 xl:m-14 p-5"
         href="#about-me"
+        onClick={(e) => {
+          e.preventDefault();
+          document.querySelector('#about-me')?.scrollIntoView({ behavior: 'smooth' })
+        }}
       >
         <ArrowDown />
       </motion.a>

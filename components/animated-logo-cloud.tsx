@@ -33,6 +33,14 @@ const logos = [
     url: '/mysql.svg',
   },
   {
+    name: "PostgreSQL",
+    url: "/postgres.svg",
+  },
+  {
+    name: "Supabase",
+    url: "/supabase.svg"
+  },
+  {
     name: "Java",
     url: "/java.svg",
   },
@@ -47,12 +55,12 @@ const logos = [
   {
     name: "Python",
     url: "/python.svg",
-  }
+  },
 ]
 
 const AnimatedLogoCloud = () => {
   return (
-    <div className="w-full pb-12">
+    <div className="w-full pb-12 pr-16">
       <div className="mx-auto w-full px-4 md:px-8">
         <div
           className="group relative mt-6 flex gap-6 overflow-hidden p-2"
@@ -72,7 +80,7 @@ const AnimatedLogoCloud = () => {
                   <div key={key} className="px-10">
                     <img
                       src={logo.url}
-                      className="h-20 w-20 px-2 drop-shadow-md"
+                      className="h-20 w-20 drop-shadow-md"
                       alt={`${logo.name}`}
                     />
                   </div>
