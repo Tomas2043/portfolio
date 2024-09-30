@@ -79,9 +79,9 @@ export default function Home() {
           <h1 className="title text-xl text-center font-bold">Tools and technologies I work / have worked with:</h1>
         </div>
         <AnimatedLogoCloud />
-        <section className="mt-20 md:px-36 xl:px-60" id="portfolio"> 
+        <section className="mt-20 md:px-36 xl:px-60 flex flex-col gap-4" id="portfolio"> 
           <h1 className="title text-4xl font-bold">Projects</h1>
-          
+          <p className="text-foreground/80">This is a WIP 👍</p>
         </section>
         <Footer />
       </main>
