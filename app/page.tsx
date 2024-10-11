@@ -55,12 +55,17 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="flex items-center justify-end">
-            <motion.img
-              src="/foto.jpg"
-              className="rounded-full size-80 object-cover border-2 border-primary"
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+              className="rounded-full size-80 p-2 bg-primary"
+            >
+              <img
+                src="/vercel.svg"
+                className="rounded-full size-full object-cover border-2 border-primary"
+              />
+            </motion.div>
           </div>
         </section>
         <section className="bg-primary mt-80" id="about-me">
@@ -79,7 +84,7 @@ export default function Home() {
           <h1 className="title text-xl text-center font-bold">Tools and technologies I work / have worked with:</h1>
         </div>
         <AnimatedLogoCloud />
-        <section className="mt-20 md:px-36 xl:px-60 flex flex-col gap-4" id="portfolio"> 
+        <section className="mt-20 md:px-36 xl:px-60 flex flex-col gap-4" id="portfolio">
           <h1 className="title text-4xl font-bold">Projects</h1>
           <p className="text-foreground/80">This is a WIP 👍</p>
         </section>
